@@ -74,7 +74,7 @@ function SelectedImage() {
 								<button className={"btn btn-dark w-100 mb-2"} onClick={() => exportAsImage(containerRef.current, 'map.jpg')}>Download</button>
 								{
 									imagesLinks.map((image, index) => (<div
-										id="images-wrap"
+										className="images-wrap"
 										key={`image-wrapper-${index}`}
 										ref={el => containerRef.current[index] = el}
 										style={{

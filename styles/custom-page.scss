@@ -1,5 +1,9 @@
-#images-wrap{
+.images-wrap{
   pointer-events: none;
+
+  img{
+    max-width: 100%;
+  }
 }
 .white-card{
   position: absolute;

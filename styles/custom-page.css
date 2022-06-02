@@ -1,5 +1,8 @@
-#images-wrap {
+.images-wrap {
   pointer-events: none;
+}
+.images-wrap img {
+  max-width: 100%;
 }
 
 .white-card {
