@@ -110,7 +110,7 @@ function SelectedImage() {
 											</p>
 											<p>
 												Postcode: {postcode} <br/>
-												Quantity: {quantity}
+												{quantity && <span>Quantity: {quantity}</span> }
 											</p>
 										</div>
 									</div>))
