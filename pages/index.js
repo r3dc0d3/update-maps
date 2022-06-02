@@ -39,6 +39,8 @@ const convertToBase64 = (file) => {
 function SelectedImage() {
 	const containerRef = useRef([]);
 	let [imagesLinks, setImages] = useState([]);
+	const [postcode, setPostcode] = useState('');
+	const [quantity, setQuantity] = useState('');
 
 
 	const handleFileUpload = async (e) => {
@@ -59,7 +61,7 @@ function SelectedImage() {
 			<div id={"page-wrap"} className={"container mt-5"}>
 				<div className="card">
 					<div className="card-header">
-						<h1 className="title">Export Maps V1.0.7</h1>
+						<h1 className="title">Export Maps V1.0.8</h1>
 					</div>
 					<div className="card-body">
 						<input
@@ -72,6 +74,15 @@ function SelectedImage() {
 						{
 							imagesLinks.length > 0 && (<div>
 								<button className={"btn btn-dark w-100 mb-2"} onClick={() => exportAsImage(containerRef.current, 'map.jpg')}>Download</button>
+
+								<div className="row my-3">
+									<div className="col">
+										<input type="text" className={"form-control"} placeholder={"Post Code"} defaultValue={postcode} onChange={e => setPostcode(e.target.value)} />
+									</div>
+									<div className="col">
+										<input type="text" className={"form-control"} placeholder={"Quantity"} defaultValue={quantity} onChange={e => setQuantity(e.target.value)} />
+									</div>
+								</div>
 								{
 									imagesLinks.map((image, index) => (<div
 										className="images-wrap"
@@ -98,8 +109,8 @@ function SelectedImage() {
 												<span className="fillIn">test</span>
 											</p>
 											<p>
-												Postcode: IG5 0 <br/>
-												Quantity: 6,112
+												Postcode: {postcode} <br/>
+												Quantity: {quantity}
 											</p>
 										</div>
 									</div>))
