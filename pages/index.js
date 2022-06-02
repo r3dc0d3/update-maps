@@ -109,6 +109,10 @@ function SelectedImage() {
 					</div>
 				</div>
 			</div>
+
+			<footer className="text-center">
+				built for Petruta Aldea
+			</footer>
 		</div>
 	);
 }

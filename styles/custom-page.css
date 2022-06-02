@@ -1,11 +1,13 @@
-.images-wrap {
+#page-wrap {
+  min-height: calc(100vh - 100px);
+}
+#page-wrap .images-wrap {
   pointer-events: none;
 }
-.images-wrap img {
+#page-wrap .images-wrap img {
   max-width: 100%;
 }
-
-.white-card {
+#page-wrap .white-card {
   position: absolute;
   left: 0;
   top: 0;
@@ -13,8 +15,7 @@
   padding: 10px 25px;
   border: 1px solid #333;
 }
-
-.full-width-flex {
+#page-wrap .full-width-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -25,14 +26,14 @@
   padding: 0;
   margin: 0;
 }
-.full-width-flex .fillIn {
+#page-wrap .full-width-flex .fillIn {
   flex: 1;
   padding: 0;
   margin: 0;
   color: transparent;
   position: relative;
 }
-.full-width-flex .fillIn:after {
+#page-wrap .full-width-flex .fillIn:after {
   position: absolute;
   left: 0;
   bottom: 5px;
