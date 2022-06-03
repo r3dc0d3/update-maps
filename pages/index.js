@@ -61,7 +61,7 @@ function SelectedImage() {
 			<div id={"page-wrap"} className={"container mt-5"}>
 				<div className="card">
 					<div className="card-header">
-						<h1 className="title">Export Maps V1.0.8</h1>
+						<h1 className="title">Export Maps V1.0.9</h1>
 					</div>
 					<div className="card-body">
 						<input
