@@ -3,6 +3,7 @@
 
   .images-wrap{
     pointer-events: none;
+    padding: 25px;
 
     img{
       max-width: 100%;
@@ -10,8 +11,8 @@
   }
   .white-card{
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 25px;
+    top: 25px;
     background: #fff;
     padding: 10px 25px;
     border: 1px solid #333;
