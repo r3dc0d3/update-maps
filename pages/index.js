@@ -105,6 +105,31 @@ function SelectedImage() {
 		)
 	}
 
+	let mapWrapper = <div
+		ref={el => containerRef.current[0] = el}
+		className={"map-wrapper"}
+	>
+		<MapWrapper />
+		<div className={"white-card"}>
+			<p>{title}</p>
+			<p className={"full-width-flex"}>
+				<span className="text">Start:</span>
+				<span className="fillIn">test</span>
+			</p>
+			<p className={"full-width-flex"}>
+				<span className="text">Finish:</span>
+				<span className="fillIn">test</span>
+			</p>
+			<p className={"full-width-flex"}>
+				<span className="text">Tracker:</span>
+				<span className="fillIn">test</span>
+			</p>
+			<p>
+				Postcode: {postcode} <br />
+				{quantity && <span>Quantity: {quantity}</span>}
+			</p>
+		</div>
+	</div>;
 	return (
 		<div>
 			<Head>
@@ -205,31 +230,7 @@ function SelectedImage() {
 								</div>
 							</div>
 							<div id="images-wrap">
-								{ imagesLinks.length > 0 ? imagesList() : <div
-									ref={el => containerRef.current[0] = el}
-									className={"map-wrapper"}
-								>
-									<MapWrapper />
-									<div className={"white-card"}>
-										<p>{title}</p>
-										<p className={"full-width-flex"}>
-											<span className="text">Start:</span>
-											<span className="fillIn">test</span>
-										</p>
-										<p className={"full-width-flex"}>
-											<span className="text">Finish:</span>
-											<span className="fillIn">test</span>
-										</p>
-										<p className={"full-width-flex"}>
-											<span className="text">Tracker:</span>
-											<span className="fillIn">test</span>
-										</p>
-										<p>
-											Postcode: {postcode} <br />
-											{quantity && <span>Quantity: {quantity}</span>}
-										</p>
-									</div>
-								</div>}
+								{ imagesList() }
 							</div>
 						</div>
 					</div>
